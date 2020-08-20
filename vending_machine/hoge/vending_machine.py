@@ -45,13 +45,13 @@ class VendingMachine:
 
     def buy(self, beverage):
         if beverage == "コーラ":
-            if self.add_total >= Cola.price and self.storage["コーラ"] >= 1:
+            if self.add_total >= price["コーラ"] and self.storage["コーラ"] >= 1:
                 # 金額が減る
-                self.add_total -= Cola.price
+                self.add_total -= price["コーラ"]
                 # 在庫が減る
                 self.storage["コーラ"] -= 1
                 # 売り上げ↑
-                self.revenue += Cola.price
+                self.revenue += price["コーラ"]
             else:
                 pass
 
